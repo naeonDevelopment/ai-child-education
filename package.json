@@ -2,34 +2,16 @@
   "name": "ai-child-education",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@supabase/supabase-js": "^2.39.0",
-    "@zep-ai/js-client": "^1.0.2",
-    "axios": "^1.6.2",
-    "openai": "^4.20.1"
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.16",
-    "postcss": "^8.4.32",
-    "tailwindcss": "^3.3.6",
-    "typescript": "^5.3.3",
-    "vite": "^5.0.5"
-  },
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.3.6",
+    "vite": "^5.0.5"
   }
 }
