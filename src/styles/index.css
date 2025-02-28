@@ -1,31 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* 
+  This file is a symbolic link to main.css
+  to maintain compatibility with existing references
+*/
 
-@layer base {
-  body {
-    @apply bg-gray-50 text-gray-900;
-  }
-}
-
-@layer components {
-  .btn {
-    @apply px-4 py-2 rounded-md font-medium transition-colors;
-  }
-  
-  .btn-primary {
-    @apply bg-primary-600 text-white hover:bg-primary-700;
-  }
-  
-  .btn-secondary {
-    @apply bg-secondary-600 text-white hover:bg-secondary-700;
-  }
-  
-  .card {
-    @apply bg-white rounded-lg shadow-md p-4;
-  }
-  
-  .input {
-    @apply border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
-  }
-}
+@import './main.css';
