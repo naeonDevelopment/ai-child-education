@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - AI Child Education</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles/main.css">
+  </head>
+  <body class="bg-gray-50 text-gray-900 min-h-screen flex flex-col">
+    <header class="bg-white shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <a href="/" class="flex-shrink-0 flex items-center">
+              <span class="text-xl font-bold text-primary-600">AI Child Education</span>
+            </a>
+          </div>
+          <div class="flex items-center">
+            <div id="nav-auth-container" class="flex items-center space-x-4">
+              <a href="/login.html" class="text-gray-700 hover:text-primary-600">Log in</a>
+              <a href="/register.html" class="btn btn-primary">Sign up</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-grow flex items-center justify-center">
+      <div class="max-w-md w-full mx-auto px-4 py-8">
+        <div class="bg-white shadow-md rounded-lg p-6">
+          <div class="text-center mb-6">
+            <h1 class="text-2xl font-bold text-gray-900">Welcome back</h1>
+            <p class="text-gray-600 mt-1">Log in to your account</p>
+          </div>
+          
+          <div id="login-error" class="bg-red-50 text-red-600 p-3 rounded-md mb-4" style="display: none;">
+            Invalid email or password. Please try again.
+          </div>
+          
+          <form id="login-form" class="space-y-4">
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+              <input type="email" id="email" name="email" required 
+                     class="input mt-1 block w-full" placeholder="you@example.com">
+            </div>
+            
+            <div>
+              <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+              <input type="password" id="password" name="password" required 
+                     class="input mt-1 block w-full">
+            </div>
+            
+            <div class="flex items-center justify-between">
+              <div class="flex items-center">
+                <input id="remember-me" name="remember-me" type="checkbox" 
+                       class="h-4 w-4 text-primary-600 border-gray-300 rounded">
+                <label for="remember-me" class="ml-2 block text-sm text-gray-700">
+                  Remember me
+                </label>
+              </div>
+              
+              <a href="/forgot-password.html" class="text-sm text-primary-600 hover:text-primary-500">
+                Forgot password?
+              </a>
+            </div>
+            
+            <div>
+              <button type="submit" class="btn btn-primary w-full py-2">
+                Log in
+              </button>
+            </div>
+          </form>
+          
+          <div class="mt-6 text-center">
+            <p class="text-sm text-gray-600">
+              Don't have an account? 
+              <a href="/register.html" class="text-primary-600 hover:text-primary-500">
+                Sign up
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 class="text-lg font-semibold mb-4">AI Child Education</h3>
+            <p class="text-gray-300">
+              An alternative educational platform powered by AI for children to explore topics not covered in traditional education.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Links</h3>
+            <ul class="space-y-2">
+              <li><a href="/" class="text-gray-300 hover:text-white">Home</a></li>
+              <li><a href="/subjects.html" class="text-gray-300 hover:text-white">Subjects</a></li>
+              <li><a href="/about.html" class="text-gray-300 hover:text-white">About Us</a></li>
+              <li><a href="/contact.html" class="text-gray-300 hover:text-white">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Contact</h3>
+            <p class="text-gray-300">
+              Email: contact@aichild.edu<br>
+              Phone: (123) 456-7890
+            </p>
+          </div>
+        </div>
+        <div class="mt-8 pt-8 border-t border-gray-700 text-gray-400 text-sm text-center">
+          &copy; 2025 AI Child Education. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- CDN inclusions of required libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.0/dist/umd/supabase.min.js"></script>
+    
+    <!-- Custom scripts -->
+    <script src="/src/js/config.js"></script>
+    <script src="/src/js/auth.js"></script>
+    <script src="/src/js/login.js"></script>
+  </body>
+</html>
