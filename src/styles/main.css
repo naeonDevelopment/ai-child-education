@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-colors;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-600 text-white hover:bg-primary-700;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary-600 text-white hover:bg-secondary-700;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-md p-4;
+  }
+  
+  .input {
+    @apply border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+  }
+
+  /* Chat container styles */
+  .chat-container {
+    @apply h-full flex flex-col;
+  }
+
+  .chat-messages {
+    @apply flex-grow overflow-y-auto p-4 space-y-4;
+  }
+
+  .message {
+    @apply rounded-lg p-3 max-w-md;
+  }
+
+  .user-message {
+    @apply bg-primary-100 text-primary-900 ml-auto;
+  }
+
+  .agent-message {
+    @apply bg-white border border-gray-200 mr-auto;
+  }
+
+  .chat-input-container {
+    @apply border-t border-gray-200 p-4 bg-white;
+  }
+
+  .chat-input-form {
+    @apply flex items-center space-x-2;
+  }
+
+  .chat-input {
+    @apply flex-grow input;
+  }
+
+  .send-button {
+    @apply btn btn-primary px-4;
+  }
+
+  /* Avatar styles */
+  .avatar-container {
+    @apply rounded-full overflow-hidden bg-gray-200 flex items-center justify-center;
+  }
+
+  .avatar-small {
+    @apply w-8 h-8;
+  }
+
+  .avatar-medium {
+    @apply w-12 h-12;
+  }
+
+  .avatar-large {
+    @apply w-24 h-24;
+  }
+
+  /* Dynamic content area */
+  .dynamic-content {
+    @apply p-4 bg-white rounded-lg border border-gray-200 mt-4;
+  }
+
+  /* Agent selection */
+  .agent-card {
+    @apply card cursor-pointer hover:shadow-lg transition-shadow;
+  }
+
+  .agent-card.selected {
+    @apply ring-2 ring-primary-500;
+  }
+}
