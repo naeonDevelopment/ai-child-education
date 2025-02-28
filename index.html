@@ -6,9 +6,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI Child Education</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles/main.css">
   </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+  <body class="bg-gray-50 text-gray-900 min-h-screen flex flex-col">
+    <header class="bg-white shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <a href="/" class="flex-shrink-0 flex items-center">
+              <span class="text-xl font-bold text-primary-600">AI Child Education</span>
+            </a>
+          </div>
+          <div class="flex items-center">
+            <div id="nav-auth-container" class="flex items-center space-x-4">
+              <a href="/login.html" class="text-gray-700 hover:text-primary-600">Log in</a>
+              <a href="/register.html" class="btn btn-primary">Sign up</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-grow">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="text-center">
+          <h1 class="text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">
+            Learn Beyond the Classroom
+          </h1>
+          <p class="mt-5 max-w-xl mx-auto text-xl text-gray-500">
+            AI-powered education for topics the traditional system doesn't approach.
+          </p>
+          <div class="mt-8 flex justify-center">
+            <div class="rounded-md shadow">
+              <a href="/register.html" class="btn btn-primary px-8 py-3">
+                Get Started
+              </a>
+            </div>
+            <div class="ml-3">
+              <a href="/subjects.html" class="btn btn-secondary px-8 py-3">
+                Explore Subjects
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-24">
+          <h2 class="text-3xl font-extrabold text-gray-900">How it works</h2>
+          <div class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="card">
+              <div class="font-bold text-xl mb-2">1. Meet your AI guide</div>
+              <p class="text-gray-700">
+                Start with our main AI assistant that helps you navigate the platform and find the perfect learning path.
+              </p>
+            </div>
+            <div class="card">
+              <div class="font-bold text-xl mb-2">2. Choose your subject</div>
+              <p class="text-gray-700">
+                Connect with specialized AI teachers for different educational disciplines and topics.
+              </p>
+            </div>
+            <div class="card">
+              <div class="font-bold text-xl mb-2">3. Interactive learning</div>
+              <p class="text-gray-700">
+                Engage with dynamic content, interactive components, and visual learning aids.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 class="text-lg font-semibold mb-4">AI Child Education</h3>
+            <p class="text-gray-300">
+              An alternative educational platform powered by AI for children to explore topics not covered in traditional education.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Links</h3>
+            <ul class="space-y-2">
+              <li><a href="/" class="text-gray-300 hover:text-white">Home</a></li>
+              <li><a href="/subjects.html" class="text-gray-300 hover:text-white">Subjects</a></li>
+              <li><a href="/about.html" class="text-gray-300 hover:text-white">About Us</a></li>
+              <li><a href="/contact.html" class="text-gray-300 hover:text-white">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Contact</h3>
+            <p class="text-gray-300">
+              Email: contact@aichild.edu<br>
+              Phone: (123) 456-7890
+            </p>
+          </div>
+        </div>
+        <div class="mt-8 pt-8 border-t border-gray-700 text-gray-400 text-sm text-center">
+          &copy; 2025 AI Child Education. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/js/main.js"></script>
   </body>
 </html>
