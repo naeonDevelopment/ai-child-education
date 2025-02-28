@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat with AI - AI Child Education</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles/main.css">
+  </head>
+  <body class="bg-gray-50 text-gray-900 min-h-screen flex flex-col">
+    <header class="bg-white shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <a href="/" class="flex-shrink-0 flex items-center">
+              <span class="text-xl font-bold text-primary-600">AI Child Education</span>
+            </a>
+          </div>
+          <div class="flex items-center">
+            <div id="nav-auth-container" class="flex items-center space-x-4">
+              <a href="/login.html" class="text-gray-700 hover:text-primary-600">Log in</a>
+              <a href="/register.html" class="btn btn-primary">Sign up</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-grow">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+          <!-- Agent Selection Sidebar -->
+          <div class="lg:col-span-1">
+            <div class="bg-white rounded-lg shadow-md p-4">
+              <h2 class="text-lg font-semibold mb-4">Choose Your AI Teacher</h2>
+              
+              <div class="space-y-3">
+                <div id="agent-main" class="agent-card selected p-3" data-agent-id="main">
+                  <div class="flex items-center">
+                    <div class="avatar-container avatar-small mr-3 bg-primary-100">
+                      <span class="text-primary-600">M</span>
+                    </div>
+                    <div>
+                      <div class="font-medium">Main Guide</div>
+                      <div class="text-sm text-gray-500">Helps you navigate</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="agent-science" class="agent-card p-3" data-agent-id="science">
+                  <div class="flex items-center">
+                    <div class="avatar-container avatar-small mr-3 bg-green-100">
+                      <span class="text-green-600">S</span>
+                    </div>
+                    <div>
+                      <div class="font-medium">Science Explorer</div>
+                      <div class="text-sm text-gray-500">Scientific discovery</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="agent-creativity" class="agent-card p-3" data-agent-id="creativity">
+                  <div class="flex items-center">
+                    <div class="avatar-container avatar-small mr-3 bg-purple-100">
+                      <span class="text-purple-600">C</span>
+                    </div>
+                    <div>
+                      <div class="font-medium">Creative Coach</div>
+                      <div class="text-sm text-gray-500">Art and imagination</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="agent-critical" class="agent-card p-3" data-agent-id="critical_thinking">
+                  <div class="flex items-center">
+                    <div class="avatar-container avatar-small mr-3 bg-yellow-100">
+                      <span class="text-yellow-600">T</span>
+                    </div>
+                    <div>
+                      <div class="font-medium">Thinking Guide</div>
+                      <div class="text-sm text-gray-500">Logic and reasoning</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chat Area -->
+          <div class="lg:col-span-3">
+            <div class="bg-white rounded-lg shadow-md h-[600px] flex flex-col">
+              <!-- Chat Header -->
+              <div class="border-b border-gray-200 p-4 flex items-center">
+                <div class="avatar-container avatar-medium mr-3 bg-primary-100">
+                  <span class="text-primary-600">M</span>
+                </div>
+                <div>
+                  <div class="font-medium" id="current-agent-name">Main Guide</div>
+                  <div class="text-sm text-gray-500" id="current-agent-description">I'll help you navigate the platform</div>
+                </div>
+              </div>
+              
+              <!-- Chat Messages -->
+              <div id="chat-messages" class="chat-messages">
+                <div class="agent-message message">
+                  Hello! I'm your AI guide for learning new and exciting things. What would you like to explore today?
+                </div>
+              </div>
+              
+              <!-- Dynamic Content Container -->
+              <div id="dynamic-content" class="dynamic-content mx-4 mb-4" style="display: none;"></div>
+              
+              <!-- Chat Input -->
+              <div class="chat-input-container">
+                <div class="chat-input-form">
+                  <input type="text" id="chat-input" class="chat-input" placeholder="Type your message here...">
+                  <button id="send-button" class="send-button">Send</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 class="text-lg font-semibold mb-4">AI Child Education</h3>
+            <p class="text-gray-300">
+              An alternative educational platform powered by AI for children to explore topics not covered in traditional education.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Links</h3>
+            <ul class="space-y-2">
+              <li><a href="/" class="text-gray-300 hover:text-white">Home</a></li>
+              <li><a href="/subjects.html" class="text-gray-300 hover:text-white">Subjects</a></li>
+              <li><a href="/about.html" class="text-gray-300 hover:text-white">About Us</a></li>
+              <li><a href="/contact.html" class="text-gray-300 hover:text-white">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Contact</h3>
+            <p class="text-gray-300">
+              Email: contact@aichild.edu<br>
+              Phone: (123) 456-7890
+            </p>
+          </div>
+        </div>
+        <div class="mt-8 pt-8 border-t border-gray-700 text-gray-400 text-sm text-center">
+          &copy; 2025 AI Child Education. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- CDN inclusions of required libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.0/dist/umd/supabase.min.js"></script>
+    
+    <!-- Custom scripts -->
+    <script src="/src/js/config.js"></script>
+    <script src="/src/js/auth.js"></script>
+    <script src="/src/js/chat.js"></script>
+  </body>
+</html>
